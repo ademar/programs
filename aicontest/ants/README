@@ -1,0 +1,11 @@
+Code submited to Google Artifical Intelligence Challenge - Fall 2012 - Ants
+
+The bot uses collaborative difussion to explore, attack enemy ants and raze enemy hills.
+
+Combat situations are resolved by assigning a probability distribution (a binomial) to each cell each ant can move to;
+then again for every one of these cells we calculate the sum distribution (by convolution) of any other cell within attack radius.
+
+A cell will be consider 'safe' if the expected value of the sum distribution is less than the expected value of the sum distribution of any of the cells within attack radius reachable by the enemy.
+
+There is some bits also dedicated to taking defensive measures if an enemy ant is smelled near one of our hills.
+
